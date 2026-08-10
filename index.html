@@ -1518,6 +1518,443 @@ button{
 }
 
 
+
+/* =========================================================
+   MOBILE-FRIENDLY POLISH
+   ========================================================= */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+.gift,
+.music-button,
+.joke-pill,
+.card {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 750px) {
+    /* Prevent horizontal overflow from decorative elements */
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Comfortable phone-side spacing */
+    .hero,
+    .reveal,
+    .letter-section,
+    .bed-section,
+    .photo-section,
+    .things,
+    .joke-section,
+    .poetry,
+    .night,
+    .final {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding-top: 72px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .kicker,
+    .section-heading .mini,
+    .final-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+        line-height: 1.5;
+    }
+
+    .hero h1 {
+        font-size: clamp(68px, 22vw, 105px);
+        line-height: .82;
+    }
+
+    .hero h2 {
+        font-size: clamp(23px, 7vw, 31px);
+        line-height: 1.2;
+        margin-top: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.75;
+        margin-top: 24px;
+        max-width: 92%;
+    }
+
+    .scroll {
+        bottom: 16px;
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    /* Opening screen */
+    #opening {
+        padding: 20px;
+    }
+
+    .opening-content {
+        width: 100%;
+    }
+
+    .opening-kicker {
+        font-size: 8px;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .opening-title {
+        font-size: clamp(60px, 19vw, 90px);
+        line-height: .85;
+    }
+
+    .opening-subtitle {
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 24px auto 30px;
+        max-width: 310px;
+    }
+
+    .opening-note {
+        font-size: 10px;
+        margin-top: 16px;
+    }
+
+    .gift {
+        transform: scale(.82);
+        transform-origin: center;
+        margin: -5px auto;
+    }
+
+    .gift:hover {
+        transform: scale(.82);
+    }
+
+    .music-player {
+        right: 10px;
+        top: max(10px, env(safe-area-inset-top));
+        padding: 7px;
+    }
+
+    .music-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Section headings */
+    .reveal {
+        padding-top: 82px;
+        padding-bottom: 82px;
+    }
+
+    .reveal h2,
+    .section-heading h2 {
+        font-size: clamp(52px, 16vw, 78px);
+        line-height: .9;
+    }
+
+    .reveal p {
+        font-size: 22px;
+        line-height: 1.55;
+        margin-top: 26px;
+    }
+
+    .letter-section,
+    .photo-section,
+    .things,
+    .joke-section {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    /* Letter */
+    .paper {
+        width: 100%;
+        padding: 50px 21px 35px;
+        border-radius: 4px;
+    }
+
+    .paper p {
+        font-size: 18px;
+        line-height: 1.72;
+        margin-bottom: 22px;
+    }
+
+    .paper .salutation {
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    .signature {
+        font-size: 31px;
+        line-height: 1.15;
+        margin-top: 35px;
+    }
+
+    /* Bed section */
+    .bed-section {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 85px;
+    }
+
+    .bed-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .bed-illustration {
+        width: 100%;
+        min-height: 300px;
+        transform: scale(.68);
+        margin: -45px 0 -25px;
+    }
+
+    .bed {
+        max-width: 390px;
+    }
+
+    .bed-copy {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bed-copy .tiny {
+        font-size: 9px;
+        letter-spacing: 3px;
+        line-height: 1.5;
+    }
+
+    .bed-copy h2 {
+        font-size: clamp(58px, 17vw, 76px);
+        line-height: .88;
+        margin: 16px 0 24px;
+    }
+
+    .bed-copy p {
+        font-size: 21px;
+        line-height: 1.55;
+    }
+
+    .bed-roast {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.5;
+        padding: 11px 15px;
+    }
+
+    /* Photos: one clean swipe-friendly column */
+    .photo-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .photo img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .photo-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 12px;
+        font-size: 17px;
+    }
+
+    /* Cards */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 42px;
+    }
+
+    .card {
+        padding: 30px 22px;
+    }
+
+    .card h3 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* Joke pills */
+    .joke-wall {
+        gap: 9px;
+        margin-top: 42px;
+    }
+
+    .joke-pill {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .joke-big {
+        font-size: 21px;
+        line-height: 1.55;
+        margin-top: 42px;
+    }
+
+    /* Poetry */
+    .poetry {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .poetry-text {
+        margin-top: 40px;
+    }
+
+    .poetry-text p {
+        font-size: clamp(22px, 6.5vw, 29px);
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    /* Night */
+    .night {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .moon {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 42px;
+    }
+
+    .night-content {
+        width: 100%;
+    }
+
+    .night-content h2 {
+        font-size: clamp(58px, 17vw, 88px);
+        line-height: .92;
+    }
+
+    .night-content p {
+        font-size: 22px;
+        line-height: 1.55;
+        margin-top: 22px;
+    }
+
+    .night-small {
+        font-size: 11px;
+        line-height: 1.75;
+        margin-top: 30px;
+    }
+
+    /* Final */
+    .final {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+
+    .final h2 {
+        font-size: clamp(65px, 19vw, 105px);
+        line-height: .85;
+    }
+
+    .final-message {
+        font-size: 21px;
+        line-height: 1.62;
+        margin: 32px auto;
+    }
+
+    .birthday {
+        font-size: clamp(43px, 12vw, 65px);
+        line-height: 1;
+    }
+
+    /* Make touch targets comfortable */
+    .music-button {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .opening-title {
+        font-size: 57px;
+    }
+
+    .paper {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .paper p {
+        font-size: 17px;
+    }
+
+    .bed-illustration {
+        transform: scale(.58);
+        margin-top: -55px;
+        margin-bottom: -40px;
+    }
+
+    .bed-copy h2 {
+        font-size: 55px;
+    }
+
+    .final-message {
+        font-size: 19px;
+    }
+}
+
+/* Respect phones that have a home-indicator area */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .final {
+        padding-bottom: calc(70px + env(safe-area-inset-bottom));
+    }
+
+    .music-player {
+        right: calc(10px + env(safe-area-inset-right));
+    }
+}
+
 /* =========================================================
    MOBILE
 ========================================================= */
